@@ -11,18 +11,6 @@ An Object Graph Mapper (OGM) for the neo4j_ graph database, built on the awesome
 - pre/post save/delete hooks.
 - Django integration via django_neomodel_
 
-.. _django_neomodel: https://github.com/neo4j-contrib/django-neomodel
-.. _neo4j: https://neo4j.com/
-.. _neo4j_driver: https://github.com/neo4j/neo4j-python-driver
-
-.. image:: https://secure.travis-ci.org/neo4j-contrib/neomodel.png
-    :target: https://secure.travis-ci.org/neo4j-contrib/neomodel/
-
-.. image:: https://readthedocs.org/projects/neomodel/badge/?version=latest
-    :alt: Documentation Status
-    :scale: 100%
-    :target: https://neomodel.readthedocs.io/en/latest/?badge=latest
-
 
 Documentation
 =============
@@ -35,22 +23,22 @@ Requirements
 ============
 
 - Python 2.7 (Up to version 3.3.1), 3.4+
-- neo4j 3.0, 3.1, 3.2, 3.3
+- neo4j 3.0, 3.1, 3.2, 3.3 (prelim 4.0)
 
 Installation
 ============
 
-Install from pypi (recommended)::
+Install from pypi (recommended: master branch)::
 
     $ pip install neomodel
 
-To install from github::
+To install from github (personal development branch):
 
-    $ pip install git+git://github.com/neo4j-contrib/neomodel.git@HEAD#egg=neomodel-dev
+    $ pip install git+git://github.com/
 
 Upgrading 2.x to 3.x
 ====================
-
+ * Changes to the syntax compatibility with neo4j 4.0
  * Now utilises neo4j_driver as the backend which uses bolt so neo4j 3 is required
  * Connection now set through config.DATABASE_URL (see getting started docs)
  * The deprecated category() method on StructuredNode has been removed
@@ -95,8 +83,3 @@ interpreters and neo4j versions::
 
     # in the project's root folder:
     $ ./tests-with-docker-compose.sh
-
-
-.. image:: https://badges.gitter.im/Join%20Chat.svg
-   :alt: Join the chat at https://gitter.im/neo4j-contrib/neomodel
-   :target: https://gitter.im/neo4j-contrib/neomodel?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
